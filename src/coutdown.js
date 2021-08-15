@@ -1,4 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
+import _clone from 'lodash/clone';
+import aValue  from './lib/helper'
 
 /**
  * 定时器组件
@@ -8,6 +10,9 @@ import React, {useState, useEffect, useRef} from 'react'
  * endCallback 结束事件
  */
 const CoutDown = (props) => {
+    // tree shaking
+    const propsCopy = _clone(props)
+
     const {start} = props
     const {endTime, nowTime, endCallback} = props
     const startFrom = {

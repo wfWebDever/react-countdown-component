@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import CoutDown from './coutdown'
+import CoutDown from './dist/coutdown.esm'
 
 function App() {
-    const endTime = new Date('2021/07/27 : 11:20:23').getTime()
-    const endTime2 = new Date('2021/07/26 : 11:30:23').getTime()
+    const endTime = new Date('2021/08/27 : 11:20:23').getTime()
+    const endTime2 = new Date('2021/08/26 : 11:30:23').getTime()
     const nowTime = new Date().getTime()
     const endCallback = () => {
         alert('end callback')
